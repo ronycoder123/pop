@@ -1,0 +1,192 @@
+<html>
+    <style>
+        .cont{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap:20px;
+        }
+        .a{
+            transition-duration: 0.3s;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color:rgb(54,54,54);
+            border:2px solid rgb(37, 37, 37);
+            padding:10px;
+            border-radius:5px;
+        }
+        .al{
+            transition-duration: 0.3s;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color:rgb(18, 94, 28);
+            padding:10px;
+            border-radius:5px;
+            font-size:20px;
+            margin-top:-20px;
+            border:2px solid rgb(4, 109, 44);
+            margin-left:200px;
+            margin-right:750px;
+        }
+        .ak{
+            transition-duration: 0.3s;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color:rgb(54,54,54);
+            padding:10px;
+            border-radius:5px;
+            font-size:20px;
+            margin-top:-10px;
+        }
+        .mode{
+            transition-duration: 0.3s;
+            width:100px;
+            border-radius:10px;
+            background-color: rgb(53, 52, 52);
+            border:2px solid rgb(255, 255, 255);
+            color:white;
+            height:50px;
+        }
+        .btns{
+            transition-duration: 0.3s;
+            padding:10px;
+           border:2px solid rgb(49, 49, 173);
+            background-color: rgb(241, 238, 238);
+            color:rgb(0, 0, 0);
+            border-radius: 5px;
+        }
+        .more_cont{
+            display: flex;
+            gap:5px;
+            align-items: center;
+            justify-content: center;
+        } 
+        .kan{
+            margin-top:30px;
+            display: flex;
+        }
+        .img_holder{
+            background-image: url('data:image/webp;base64,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');
+            height:350px;
+            width:2500px;
+            background-repeat: no-repeat;
+            background-size:cover;
+            border:2px solid black;
+            border-radius: 20px;
+        }
+        .img_holderz{
+            background-image: url('data:image/webp;base64,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');
+            height:350px;
+            width:5000px;
+            background-repeat: no-repeat;
+            background-size:cover;
+            border:2px solid black;
+            border-radius: 20px;
+        }
+        .textbox{
+            margin-top:20px;
+            display: block;
+            margin-left:auto;
+            align-items: center;
+            justify-content: center;
+        }
+        .textboxm{
+            margin-top:40px;
+            display: block;
+            margin-right:auto;
+        }
+        .charts{
+            display: flex;
+            justify-content:center;
+            align-items: center;
+        }
+        .aj{
+            transition-duration: 0.3s;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color:rgb(18, 94, 28);
+            padding:10px;
+            border-radius:5px;
+            font-size:20px;
+            margin-top:-20px;
+            border:2px solid rgb(4, 109, 44);
+            margin-left:200px;
+            display: block;
+            margin-right:500px;
+            margin-left:550px;
+        }
+    </style>
+    <body id="body">
+        <div class="cont">
+        <h4 class="a" id='am'>Population</h4>
+        <button class="mode" id="mode">Dark Mode</button>
+        </div>
+        <hr>
+        <div class="more_cont" id="b">
+            <a href="https://ronycoder123.github.io/Maths-project/">
+        <button class="btns" id="as2">Home</button>
+        </a>
+        <a href="https://ronycoder123.github.io/rel/">
+        <button class="btns" id="as3">Religion Distribution</button>
+        </a>
+        <a href="https://ronycoder123.github.io/bib/">
+        <button class="btns" id="as4">Bibliography[Digital]</button>
+        </a>
+        <a href="https://ronycoder123.github.io/rain/">
+        <button class="btns" id="as5">Rainfall Statistics</button>
+        </a>
+        <a href="https://ronycoder123.github.io/lit/">
+        <button class="btns" id="as">Language and Literacy</button>
+        </a>
+        </div>
+        <hr>
+        <div class="kan">
+            <div class="img_holder">
+            </div>
+            <div class="textbox">
+            <h3 class="ak" id="so">Karnataka has a population of approximately 6.8 crore people, making it one of the more populous states in India. The population is unevenly distributed, with higher concentration in urban areas such as Bengaluru, Mysuru, and Hubballi–Dharwad, while rural regions are more sparsely populated.Karnataka has a population of approximately 6.8 crore people, making it one of the more populous states in India. The population is unevenly distributed, with higher concentration in urban areas such as Bengaluru, Mysuru, and Hubballi–Dharwad, while rural regions are more sparsely populated. Karnataka has a population density of about 319 people per square kilometre and an urban population of nearly 38%, reflecting steady urbanisation driven by industrial growth and the expansion of the IT sector. The state shows a favourable sex ratio of around 973 females per 1000 males</h3>
+            </div>
+        </div>
+        <div class="charts">
+                <img style="border:2px solid black;border-radius: 20px;" src="c:\Users\sajan\my python\OneDrive\Pictures\Screenshots\Screenshot (342).png" alt="">
+            </div>
+            <hr>
+        <div class="kan">
+            <div class="img_holderz"></div>
+            <div class="textbox">
+                <h3 class="ak" id="sos">Ladakh has a population of just over 3 lakh people, making it one of the least populated regions in India. The majority of the population resides in the districts of Leh and Kargil, while large parts of the region remain sparsely inhabited due to the challenging mountainous terrain. The population growth in Ladakh has historically been slow, reflecting both the harsh living conditions and limited accessibility of many areas. Settlements are mainly small villages and towns scattered across valleys, plateaus, and river basins, with very few densely populated areas. Over time, some growth has occurred due to natural increase and migration from nearby regions, but the overall population remains low compared to most other Indian states and union territories. Ladakh’s population is unique in its distribution, concentrated in livable pockets while vast stretches of land remain almost uninhabited, highlighting the relationship between population and geography in this remote region.</h3></div>
+        </div>
+        <div class="charts">
+            <img style="border:2px solid black;border-radius: 20px;margin-top:10px;" src="C:\Users\sajan\my python\OneDrive\Pictures\Screenshots\Screenshot (344).png" alt="">
+        </div>
+        <hr>
+        <div class="textboxm">
+        </div>
+        <script>
+            let x = 0;
+document.getElementById('mode').onclick = function() {
+    x += 1;
+    if (x%2 !=0){
+        document.getElementById('so').style.color=document.getElementById('sos').style.color='white'
+    document.getElementById('body').style.backgroundColor='rgb(15,15,15)';
+    document.getElementById('as').style.backgroundColor=document.getElementById('as2').style.backgroundColor=document.getElementById('as3').style.backgroundColor=document.getElementById('as4').style.backgroundColor=document.getElementById('as5').style.backgroundColor='rgb(15,15,15)'
+document.getElementById('as').style.color=document.getElementById('as2').style.color=document.getElementById('as3').style.color=document.getElementById('as4').style.color=document.getElementById('as5').style.color='white'
+document.getElementById('am').style.border='2px solid white'
+document.getElementById('am').style.color='white'
+document.getElementById('mode').style.backgroundColor='white'
+document.getElementById('mode').style.color='black'
+document.getElementById('mode').style.border='2px solid black'
+document.getElementById('mode').textContent='Light Mode'
+}
+if (x%2==0){
+    document.getElementById('body').style.backgroundColor='white';
+    document.getElementById('as').style.backgroundColor=document.getElementById('as2').style.backgroundColor=document.getElementById('as3').style.backgroundColor=document.getElementById('as4').style.backgroundColor=document.getElementById('as5').style.backgroundColor='white'
+document.getElementById('as').style.color=document.getElementById('as2').style.color=document.getElementById('as3').style.color=document.getElementById('as4').style.color=document.getElementById('as5').style.color='black'
+document.getElementById('so').style.color=document.getElementById('sos').style.color='rgb(54,54,54)'
+document.getElementById('am').style.border='2px solid rgb(54,54,54)'
+document.getElementById('am').style.color='rgb(54,54,54)'
+document.getElementById('mode').style.backgroundColor='rgb(54,54,54)';
+document.getElementById('mode').style.border='2px solid white'
+document.getElementById('mode').textContent='Dark Mode'
+document.getElementById('mode').style.color='white'
+}
+}
+</script>
+        </body>
+</html>
